@@ -1,0 +1,77 @@
+{% comment %} {{ 'slick.css' | asset_url | stylesheet_tag }}
+{{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+{{ 'jquery.min.js' | asset_url | script_tag }}
+{{ 'slick.min.js' | asset_url | script_tag }} {% endcomment %}
+
+<div class="collection-link-container page-width">
+  <div class="js_collection_link_list">
+    {% for type in shop.types %}
+      <span class="collection-link">
+        {{- type | link_to_type }}
+      </span>
+    {% endfor %}
+  </div>
+</div>
+
+
+<style>
+  .collection-link-container {
+    margin-top: 5rem;
+  }
+
+  .js_collection_link_list {
+    justify-content: center;
+  }
+  .collection-link a {
+    color: #595757;
+    font-family: Noto Sans JP;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+  }
+
+  .collection-link a:hover {
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+</style>
+
+<script>
+  $(document).ready(function() {
+    $(".js_collection_link_list").slick({
+      autoplay: false,
+      slidesToShow: 8,
+      slidesToScroll: 1,
+      centerMode: true,
+      responsive: [
+        ,
+        {
+          breakpoint: 868,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2
+          }
+        }, {
+          breakpoint: 400,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });
+</script>
