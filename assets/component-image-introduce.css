@@ -1,0 +1,195 @@
+.product__info-wrapper {
+  width: 495px;
+}
+
+.product-prices p {
+  color: #595757;
+  font-family: Noto Sans JP;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: 2.4px;
+}
+
+.product__title h1 {
+  color: #595757;
+  font-family: Noto Sans JP;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 28px;
+}
+
+.product-description {
+  margin-top: 87.9px;
+  padding: 87px 150px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+.product-description__btn {
+  padding: 14px 94px;
+  border: 0.5px solid #595757;
+  background: #ffff;
+  cursor: pointer;
+}
+
+.product-author {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  padding: 51px 158px;
+  gap: 48px;
+}
+.product-author__detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+}
+.product-author__detail .product-author__detail--info {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.product-author__detail .product-author__detail--info img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.product-author__detail p {
+  margin: 0px;
+}
+
+.product-ingredient {
+  margin-top: 35px;
+  padding: 77px 155px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  border: 1px solid #eee;
+}
+
+.product-ingredient__list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.product-ingredient__list--detail {
+  display: flex;
+}
+.product-ingredient__list--detail-content {
+  width: 70%;
+}
+.product-ingredient__list--detail-title {
+  white-space: nowrap;
+  width: 30%;
+}
+
+.product-review {
+  padding: 60px 78px;
+  background: rgba(89, 87, 87, 0.1);
+}
+
+.product-review__title {
+  text-align: center;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #595757;
+}
+
+.product-review__rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-review__rating--number {
+  margin: 0px;
+}
+
+.product-review__rating--list-star {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.product-review__rating--list-star li {
+  list-style: none;
+  padding: 0px;
+}
+
+.product-review__rating--btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  margin-top: 48px;
+}
+
+.product-review__rating--btn button {
+  padding: 14px 94px;
+  width: 276px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+}
+
+.product-review__rating--btn .btn-1 {
+  background: #595757;
+  color: #fff;
+}
+
+.product-form__quantity .form__label {
+  margin-bottom: 0.6rem;
+  margin-right: 12px;
+}
+
+.product-quantity {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.product-quantity select {
+  width: 89px;
+  height: 47px;
+  flex-shrink: 0;
+  border: 0.3px solid #595757;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Style the options in the select box */
+.product-quantity select option {
+  font-size: 14px;
+  color: #333; /* Text color */
+}
+
+/* Style the select box when it's focused */
+.product-quantity select:focus {
+  outline: none; /* Remove the default focus outline */
+  border-color: #007bff; /* Change the border color when focused */
+}
+
+.product-form__buttons {
+  padding-top: 64px;
+  margin: 0px;
+}
+.product-form__buttons button {
+  width: 325px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
