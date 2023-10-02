@@ -11,14 +11,34 @@
     },
     "7284a1f8-1c47-4aa8-99fd-c5900b4783cd": {
       "type": "image-banner",
+      "blocks": {
+        "d5ecbe91-43aa-44b8-843f-3b291754bce2": {
+          "type": "heading",
+          "settings": {
+            "heading": "KANASAN RESORT",
+            "heading_size": "h1"
+          }
+        },
+        "597b2ff2-578a-4e0e-82c9-7751b8f2753f": {
+          "type": "text",
+          "settings": {
+            "text": "沖縄の恵みを感じて",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "d5ecbe91-43aa-44b8-843f-3b291754bce2",
+        "597b2ff2-578a-4e0e-82c9-7751b8f2753f"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/12936_3.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
+        "image_height": "small",
+        "desktop_content_position": "middle-left",
         "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "desktop_content_alignment": "left",
+        "color_scheme": "main-text",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -36,9 +56,9 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": true,
-        "enable_filtering": false,
+        "enable_filtering": true,
         "filter_type": "horizontal",
-        "enable_sorting": true,
+        "enable_sorting": false,
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36

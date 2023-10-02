@@ -118,6 +118,7 @@ slideshow-component .slideshow.banner {
   line-height: 1.6;
   font-family: Noto Sans JP;
   letter-spacing: 1.6px;
+  color: #595757;
 }
 @media screen and (min-width: 750px) {
   .slideshow__text-wrapper.banner__content {

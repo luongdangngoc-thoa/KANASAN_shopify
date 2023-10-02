@@ -6,7 +6,7 @@
         "placeholder-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bg.png",
+            "image": "shopify:\/\/shop_images\/background.png",
             "heading": "素朴で身近で <br> “愛おしい”<br> 沖縄の <br> たからさがし",
             "box_align": "middle-left",
             "show_text_box": true,
@@ -19,7 +19,7 @@
         "placeholder-1": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bg.png",
+            "image": "shopify:\/\/shop_images\/background.png",
             "heading": "素朴で身近で <br> “愛おしい”<br> 沖縄の <br> たからさがし",
             "box_align": "middle-left",
             "show_text_box": true,
@@ -32,7 +32,7 @@
         "placeholder-2": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bg.png",
+            "image": "shopify:\/\/shop_images\/background.png",
             "heading": "素朴で身近で <br> “愛おしい”<br> 沖縄の <br> たからさがし",
             "box_align": "middle-left",
             "show_text_box": true,
@@ -55,6 +55,10 @@
         "change_slides_speed": 3,
         "image_behavior": "none"
       }
+    },
+    "category-link": {
+      "type": "category-link",
+      "settings": {}
     },
     "featured_collection": {
       "type": "featured-collection",
@@ -87,6 +91,7 @@
   },
   "order": [
     "slideshow",
+    "category-link",
     "featured_collection"
   ]
 }
