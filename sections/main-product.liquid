@@ -241,9 +241,7 @@
             </div>
             {%- when 'quantity_selector' -%}
               <div
-              id="Quantity-Form-{{ section.id }}"
-              class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
-              {{ block.shopify_attributes }}>
+              id="Quantity-Form-{{ section.id }}"class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"{{ block.shopify_attributes }}>
               {% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
               {% # theme-check-disable %}
               {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
@@ -357,18 +355,7 @@
                     data-cart-quantity="{{ cart_qty }}"
                     data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                     min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                    {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
-                    data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                    max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                    {% endif %}
-                    step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
-                    value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                    form="{{ product_form_id }}"
-                    id="updates_{{ item.key }}"
-                    class="cart__qty-input"
-                    data-quantity-input
-                    data-quantity-item="{{ forloop.index }}"
-                    data-quantity-input-mobile>
+                    {% if product.selected_or_first_available_variant.quantity_rule.max != null %}data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"{% endif %}step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"form="{{ product_form_id }}"id="updates_{{ item.key }}"class="cart__qty-input"data-quantity-inputdata-quantity-item="{{ forloop.index }}"data-quantity-input-mobile>
                     {% for i in (1..product.first_available_variant.inventory_quantity) %}
                       <option value="{{ i }}">{{ i }}</option>
                     {% endfor %}
@@ -506,9 +493,7 @@
                 <aside
                   aria-label="{{ 'accessibility.complementary_products' | t }}"
                   {{ block.shopify_attributes }}
-                  {% if block.settings.make_collapsible_row %}
-                  class="product__accordion accordion"
-                  {% endif %}>
+                  {% if block.settings.make_collapsible_row %}class="product__accordion accordion"{% endif %}>
                   <div class="complementary-products__container">
                     {%- if block.settings.make_collapsible_row -%}
                       <details id="Details-{{ block.id }}-{{ section.id }}" open>
@@ -532,23 +517,18 @@
                           id="Slider-{{ block.id }}"
                           class="contains-card contains-card--product complementary-slider grid grid--1-col slider slider--everywhere"
                           role="list"
-                          {% if number_of_slides > 1 %}
-                          aria-label="{{ 'general.slider.name' | t }}"
-                          {% endif %}>
+                          {% if number_of_slides > 1 %}aria-label="{{ 'general.slider.name' | t }}"{% endif %}>
                           {%- for i in (1..number_of_slides) -%}
                             <div
                               id="Slide-{{ block.id }}-{{ forloop.index }}"
                               class="complementary-slide complementary-slide--{{ settings.card_style }} grid__item slider__slide slideshow__slide"
                               tabindex="-1"
                               role="group"
-                              {% if number_of_slides > 1 %}
-                              aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
-                              aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                              {% endif %}>
+                              {% if number_of_slides > 1 %}aria-roledescription="{{ 'sections.slideshow.slide' | t }}"aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"{% endif %}>
                               <ul class="list-unstyled" role="list">
                                 {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
                                   <li>
-                                    {% render 'card-product'
+                                    {% render 'card-product' 
                                      , card_product: product,
                                      media_aspect_ratio: block.settings.image_ratio,
                                      show_secondary_image: false,
@@ -617,7 +597,7 @@
               {%- endif -%}
             </product-recommendations>
             {%- when 'icon-with-text' -%}
-            {% render 'icon-with-text'
+            {% render 'icon-with-text' 
              , block: block %}
           {%- endcase -%}
         {%- endfor -%}
@@ -748,7 +728,7 @@
       var selectedQuantity = document.querySelector('#quantity').value;
 
 // Add an event listener to the "Buy" button (adjust the selector as needed)
-      document.querySelector('#ProductSubmitButton-                                       {{ section_id }}').addEventListener('click', function(e) {
+      document.querySelector('#ProductSubmitButton-                                                     {{ section_id }}').addEventListener('click', function(e) {
 
 // Prevent the default form submission
         e.preventDefault();
@@ -773,13 +753,13 @@
 
 
 
-      const hiddenInput = document.querySelector('#                                       {{ product_form_id }} input[name="id"]');
+      const hiddenInput = document.querySelector('#                                                     {{ product_form_id }} input[name="id"]');
       const noScriptInputWrapper = document.createElement('div');
-      const variantSwitcher = document.querySelector('variant-radios[data-section="                                       {{ section.id }} "]') || document.querySelector('variant-selects[data-section="                                       {{ section.id }} "]');
-      noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-                                       {{ section.id }}').textContent;
+      const variantSwitcher = document.querySelector('variant-radios[data-section="                                                     {{ section.id }} "]') || document.querySelector('variant-selects[data-section="                                                     {{ section.id }} "]');
+      noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-                                                     {{ section.id }}').textContent;
       variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
 
-      document.querySelector('#Variants-                                       {{ section.id }}').addEventListener('change', function(event) {
+      document.querySelector('#Variants-                                                     {{ section.id }}').addEventListener('change', function(event) {
         hiddenInput.value = event.currentTarget.value;
       });
     });
@@ -796,8 +776,8 @@
   <script type="application/ld+json">
     {
     "@context": "http://schema.org/",
-                                                                                                                                                                  "@type": "Product",
-                                                                                                                                                                  "name": {{ product.title | json }},
+                                                                                                                                                                                                                          "@type": "Product",
+                                                                                                                                                                                                                          "name": {{ product.title | json }},
     "url": {{ request.origin | append: product.url | json }},
     {% if seo_media -%}
       "image": [
@@ -810,7 +790,7 @@
     {%- endif %}
     "brand": {
     "@type": "Brand",
-                                                                                                                                                                    "name": {{ product.vendor | json }}
+                                                                                                                                                                                                                            "name": {{ product.vendor | json }}
     },
     "offers": [
     {%- for variant in product.variants -%}

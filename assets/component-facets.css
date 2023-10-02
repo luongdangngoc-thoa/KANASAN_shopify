@@ -179,6 +179,7 @@
   grid-row: 1;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .facets__heading {
